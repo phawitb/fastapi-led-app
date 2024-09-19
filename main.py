@@ -31,8 +31,7 @@ def page_data(province,page):
     page -= 1
     print(page*n_perpage,n_perpage*(page+1))
     data_list = data[page*n_perpage:n_perpage*(page+1)]
-    data_dict = {i: data_list[i] for i in range(len(data_list))}
-    return data_dict
+    return data_list
 
 # Endpoint to get the column names
 @app.get("/columns")
